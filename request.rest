@@ -1,0 +1,33 @@
+###
+GET http://localhost:3003/accounts/
+
+### Get by id
+GET http://localhost:3003/accounts/a001
+
+### Get by id (incorreto)
+GET http://localhost:3003/accounts/a0021
+
+### Delete by id
+DELETE http://localhost:3003/accounts/a001
+
+### Change account by id
+PUT http://localhost:3003/accounts/a001
+Content-Type: application/json
+
+{
+    "id": "id_test",
+    "ownerName": "ownerName_test",
+    "balance": 100,
+    "type": "Ouro"
+}
+
+### Criar nova account
+POST http://localhost:3003/accounts/
+Content-Type: application/json
+
+{
+    "id": "a004",
+    "ownerName": "Taya",
+    "balance": 1500000,
+    "type": "Black"
+}
